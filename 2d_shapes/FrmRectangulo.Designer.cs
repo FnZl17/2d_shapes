@@ -45,6 +45,7 @@
             this.lblTituloGrafico = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblMensajeError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEntrada
@@ -211,11 +212,20 @@
             this.label2.TabIndex = 16;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // lblMensajeError
+            // 
+            this.lblMensajeError.AutoSize = true;
+            this.lblMensajeError.Location = new System.Drawing.Point(36, 373);
+            this.lblMensajeError.Name = "lblMensajeError";
+            this.lblMensajeError.Size = new System.Drawing.Size(0, 16);
+            this.lblMensajeError.TabIndex = 17;
+            // 
             // FrmRectangulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMensajeError);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTituloGrafico);
@@ -262,5 +272,6 @@
         private System.Windows.Forms.Label lblTituloGrafico;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblMensajeError;
     }
 }

@@ -25,9 +25,10 @@ namespace _2d_shapes
         }
         private void ActualizarDibujo()
         {
-            _miTriangulo.LadoA = txtLado1.Text.ValidarNumero().AsegurarMinimo(1);
-            _miTriangulo.LadoB = txtLado2.Text.ValidarNumero().AsegurarMinimo(1);
-            _miTriangulo.LadoC = txtLado3.Text.ValidarNumero().AsegurarMinimo(1);
+            _miTriangulo.LadoA = txtLado1.Text.ValidarNumero().AsegurarMinimo(0);
+            _miTriangulo.LadoB = txtLado2.Text.ValidarNumero().AsegurarMinimo(0);
+            _miTriangulo.LadoC = txtLado3.Text.ValidarNumero().AsegurarMinimo(0);
+            lblMensajeError.Text = txtLado1.Text.ReportarError("Lado 1") + txtLado2.Text.ReportarError("Lado 2") + txtLado3.Text.ReportarError("Lado 3");
             this.Invalidate();
         }
         private void lblEntrada_Click(object sender, EventArgs e)
@@ -83,6 +84,8 @@ namespace _2d_shapes
             lblAreaResult.Text = areaTriangulo.ToString("F2");
             double perimetroTriangulo = _miTriangulo.CalcularPerimetro();
             lblPerimetroResult.Text = perimetroTriangulo.ToString("F2");
+            lblMensajeError.Text = txtLado1.Text.ReportarError("Lado 1") + txtLado2.Text.ReportarError("Lado 2") + txtLado3.Text.ReportarError("Lado 3");
+
         }
     }
 

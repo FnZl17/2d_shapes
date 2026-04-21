@@ -46,6 +46,7 @@
             this.txtLado1 = new System.Windows.Forms.TextBox();
             this.txtLado2 = new System.Windows.Forms.TextBox();
             this.txtLado3 = new System.Windows.Forms.TextBox();
+            this.lblMensajeError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEntrada
@@ -211,11 +212,20 @@
             this.txtLado3.TabIndex = 33;
             this.txtLado3.TextChanged += new System.EventHandler(this.txtLado3_TextChanged);
             // 
+            // lblMensajeError
+            // 
+            this.lblMensajeError.AutoSize = true;
+            this.lblMensajeError.Location = new System.Drawing.Point(58, 428);
+            this.lblMensajeError.Name = "lblMensajeError";
+            this.lblMensajeError.Size = new System.Drawing.Size(0, 16);
+            this.lblMensajeError.TabIndex = 34;
+            // 
             // FrmTriangulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 505);
+            this.Controls.Add(this.lblMensajeError);
             this.Controls.Add(this.txtLado3);
             this.Controls.Add(this.txtLado2);
             this.Controls.Add(this.txtLado1);
@@ -262,5 +272,6 @@
         private System.Windows.Forms.TextBox txtLado1;
         private System.Windows.Forms.TextBox txtLado2;
         private System.Windows.Forms.TextBox txtLado3;
+        private System.Windows.Forms.Label lblMensajeError;
     }
 }

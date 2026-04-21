@@ -45,6 +45,7 @@
             this.lblProceso = new System.Windows.Forms.Label();
             this.lbl_grafico = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.lblMensajeError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_Entradas
@@ -52,7 +53,7 @@
             this.lbl_Entradas.AutoSize = true;
             this.lbl_Entradas.Location = new System.Drawing.Point(48, 40);
             this.lbl_Entradas.Name = "lbl_Entradas";
-            this.lbl_Entradas.Size = new System.Drawing.Size(80, 20);
+            this.lbl_Entradas.Size = new System.Drawing.Size(64, 16);
             this.lbl_Entradas.TabIndex = 0;
             this.lbl_Entradas.Text = "Entradas:";
             // 
@@ -61,7 +62,7 @@
             this.lbl_Radio.AutoSize = true;
             this.lbl_Radio.Location = new System.Drawing.Point(58, 85);
             this.lbl_Radio.Name = "lbl_Radio";
-            this.lbl_Radio.Size = new System.Drawing.Size(81, 20);
+            this.lbl_Radio.Size = new System.Drawing.Size(65, 16);
             this.lbl_Radio.TabIndex = 1;
             this.lbl_Radio.Text = "Radio (r): ";
             // 
@@ -179,7 +180,7 @@
             this.lbl_grafico.AutoSize = true;
             this.lbl_grafico.Location = new System.Drawing.Point(360, 30);
             this.lbl_grafico.Name = "lbl_grafico";
-            this.lbl_grafico.Size = new System.Drawing.Size(63, 20);
+            this.lbl_grafico.Size = new System.Drawing.Size(50, 16);
             this.lbl_grafico.TabIndex = 39;
             this.lbl_grafico.Text = "Gráfico";
             this.lbl_grafico.Click += new System.EventHandler(this.label3_Click);
@@ -190,11 +191,20 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // lblMensajeError
+            // 
+            this.lblMensajeError.AutoSize = true;
+            this.lblMensajeError.Location = new System.Drawing.Point(57, 347);
+            this.lblMensajeError.Name = "lblMensajeError";
+            this.lblMensajeError.Size = new System.Drawing.Size(0, 16);
+            this.lblMensajeError.TabIndex = 40;
+            // 
             // FrmCirculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMensajeError);
             this.Controls.Add(this.lbl_grafico);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -236,5 +246,6 @@
         private System.Windows.Forms.Label lblProceso;
         private System.Windows.Forms.Label lbl_grafico;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Label lblMensajeError;
     }
 }

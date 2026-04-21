@@ -17,5 +17,18 @@ namespace _2d_shapes.Validaciones
         {
             return Math.Max(valor, minimo);
         }
+        public static string ReportarError(this string texto, string nombreCampo)
+        {
+            if (string.IsNullOrWhiteSpace(texto))
+                return $" *{nombreCampo} requerido. ";
+
+            if (!double.TryParse(texto, out double res))
+                return $" *{nombreCampo} inválido. ";
+
+            if (res <= 0)
+                return $"* {nombreCampo} debe ser > 0. ";
+
+            return ""; 
+        }
     }
 }

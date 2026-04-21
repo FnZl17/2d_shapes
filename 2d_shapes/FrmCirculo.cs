@@ -25,7 +25,8 @@ namespace _2d_shapes
         
         private void ActualizarDibujo()
         {
-            _micirculoGrafico.Radio = txt_Radio.Text.ValidarNumero().AsegurarMinimo(1);
+            _micirculoGrafico.Radio = txt_Radio.Text.ValidarNumero().AsegurarMinimo(0);
+            lblMensajeError.Text = txt_Radio.Text.ReportarError("Radio");
             this.Invalidate();
         }
         protected override void OnPaint(PaintEventArgs e)
@@ -49,6 +50,7 @@ namespace _2d_shapes
             lblAreaResult.Text = areaCirculo.ToString("F2");
             double perimetroCirculo = _micirculoGrafico.Calcularperimetro();
             lblPerimetroResult.Text= perimetroCirculo.ToString("F2");
+            lblMensajeError.Text=txt_Radio.Text.ReportarError("Radio");
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)

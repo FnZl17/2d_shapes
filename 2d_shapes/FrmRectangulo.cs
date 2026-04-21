@@ -28,9 +28,10 @@ namespace _2d_shapes
 
             private void ActualizarDibujo()
             {
-                _miRectangulo.Ancho = txtAncho.Text.ValidarNumero().AsegurarMinimo(1);  
-            _miRectangulo.Largo = txtLargo.Text.ValidarNumero().AsegurarMinimo(1);
-                this.Invalidate();
+                _miRectangulo.Ancho = txtAncho.Text.ValidarNumero().AsegurarMinimo(0);  
+            _miRectangulo.Largo = txtLargo.Text.ValidarNumero().AsegurarMinimo(0);
+            lblMensajeError.Text = txtAncho.Text.ReportarError("Ancho") + txtLargo.Text.ReportarError("Largo");
+            this.Invalidate();
             }
 
 
@@ -100,6 +101,9 @@ namespace _2d_shapes
 
             double resPerimetro =_miRectangulo.CalcularPerimetro();
             lblPerimetroResult.Text = resPerimetro.ToString("F2");
+
+            lblMensajeError.Text = txtAncho.Text.ReportarError("Ancho") + txtLargo.Text.ReportarError("Largo");
+
         }
 
         private void label1_Click_1(object sender, EventArgs e)
