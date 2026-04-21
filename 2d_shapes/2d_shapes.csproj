@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCirculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCirculo.Designer.cs">
+      <DependentUpon>FrmCirculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTriangulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTriangulo.Designer.cs">
+      <DependentUpon>FrmTriangulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRectangulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,8 +76,16 @@
     <Compile Include="frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica\CirculoGrafico.cs" />
+    <Compile Include="Logica\IFiguras.cs" />
+    <Compile Include="Logica\RectanguloGrafico.cs" />
+    <Compile Include="Logica\TrianguloGrafico.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validaciones\ExtensionValidacion.cs" />
+    <EmbeddedResource Include="FrmCirculo.resx">
+      <DependentUpon>FrmCirculo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRectangulo.resx">
       <DependentUpon>FrmRectangulo.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTriangulo.resx">
+      <DependentUpon>FrmTriangulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _2d_shapes.Validaciones;
+using _2d_shapes.logica;
 
 namespace _2d_shapes
     {
@@ -26,8 +28,8 @@ namespace _2d_shapes
 
             private void ActualizarDibujo()
             {
-                _miRectangulo.Ancho = txtAncho.Text.ValidarEntero().AsegurarMinimo(1);
-                _miRectangulo.Largo = txtLargo.Text.ValidarEntero().AsegurarMinimo(1);
+                _miRectangulo.Ancho = txtAncho.Text.ValidarNumero().AsegurarMinimo(1);  
+            _miRectangulo.Largo = txtLargo.Text.ValidarNumero().AsegurarMinimo(1);
                 this.Invalidate();
             }
 
@@ -91,36 +93,44 @@ namespace _2d_shapes
             {
 
             }
-            public class RectanguloGrafico
-            {
-                public int X { get; }
-                public int Y { get; }
-                public int Ancho { get; set; }
-                public int Largo { get; set; }
-
-                public RectanguloGrafico(int x, int y) { X = x; Y = y; }
-
-                public void Dibujar(Graphics g, Pen lapiz)
-                {
-                    if (Ancho > 0 && Largo > 0)
-                        g.DrawRectangle(lapiz, X, Y, Ancho, Largo);
-                }
-            }
-
-        }
-
-        // --- MOTOR DE VALIDACIÓN (Fluent Extensions) ---
-        // Mover la clase de extensiones a nivel de espacio de nombres y declararla estática
-        public static class ExtensionesValidacion
+        private void btnCalcular_Click(object sender, EventArgs e)
         {
-            public static int ValidarEntero(this string texto)
-            {
-                return int.TryParse(texto, out int resultado) ? resultado : 0;
-            }
+            double resArea = _miRectangulo.CalcularArea();
+            lblAreaResult.Text= resArea.ToString("F2");
 
-            public static int AsegurarMinimo(this int valor, int minimo)
-            {
-                return Math.Max(valor, minimo);
-            }
+            double resPerimetro =_miRectangulo.CalcularPerimetro();
+            lblPerimetroResult.Text = resPerimetro.ToString("F2");
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblArea_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPerimetro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSalid_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblProceso_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+
     }

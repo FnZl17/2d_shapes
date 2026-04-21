@@ -30,5 +30,29 @@ namespace _2d_shapes
             frmRectangulo.MdiParent = this;
             frmRectangulo.Show();
         }
+
+        private void miShapesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void triangleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTriangulo frmTriangulo= new FrmTriangulo();
+            frmTriangulo.MdiParent = this;
+            frmTriangulo.Show();
+        }
+
+        private void circleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCirculo frmCirculo = new FrmCirculo();
+            frmCirculo.MdiParent = this;
+            frmCirculo.Show();
+        }
     }
 }
